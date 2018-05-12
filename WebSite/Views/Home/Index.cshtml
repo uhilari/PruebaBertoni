@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+	IList<Bertoni.Model.Album> albums = (IList<Bertoni.Model.Album>)ViewData["albums"];
+}
+
+<div class="row">
+	<div class="col-md-3">Selecciona :</div>
+	<div class="col-md-9">
+		<select id="slt-album" class="form-control">
+			@foreach(var itm in albums) {
+			<option value="@itm.Id">@itm.Title</option>
+			}
+		</select>
+	</div>
+</div>
+<div class="row">
+	<button id="btn-album" class="btn">Visualiar Album</button>
+</div>
+<div id="div-photos" class="row">
+</div>
+<div id="div-comments" class="row">
+</div>

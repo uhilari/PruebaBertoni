@@ -1,0 +1,22 @@
+﻿@{
+var comments = (IList<Bertoni.Model.Comment>)ViewData["comments"];
+}
+@foreach(var itm in comments) {
+	<div class="col-md-12 div-comment">
+		<table>
+			<tr>
+				<td colspan="2">
+					<div>@itm.Body</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div>@itm.Name</div>
+				</td>
+				<td>
+					<div>@itm.Email</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+}

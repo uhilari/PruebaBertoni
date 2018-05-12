@@ -1,0 +1,10 @@
+﻿@{
+var photos = (IList<Bertoni.Model.Photo>)ViewData["photos"];
+}
+@foreach(var itm in photos) {
+	<div class="col-md-2 center-block div-photo">
+		<img src="@itm.ThumbnailUrl" alter="@itm.Title" />
+		<p>@itm.Title</p>
+		<button class="btn btn-comment" data-photoId="@itm.Id">Ver Comentarios</button>
+	</div>
+}
